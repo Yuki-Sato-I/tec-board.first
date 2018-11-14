@@ -1,0 +1,81 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/******************************************* top *************************************************/
+ .top-contents{
+   width: 100%;
+   height: 900px;
+   background-image: url("blue.jpg");
+   background-size: cover;
+ }
+
+ .top-container {
+   margin: 0px 12px;
+ }
+
+ .top-text  {
+   color: white;
+   padding-top: 170px;
+ }
+
+ .top-text h1 {
+   margin: 0px 0px;
+   font-size: 80px;
+   text-align: center;
+ }
+
+ .top-text p {
+   text-align: center;
+ }
+
+ .btn-wrapper {
+   margin-top: 50px;
+   text-align: center;
+ }
+
+ .btn {
+   background-color: rgba(119, 250, 206,0.8);
+   display: inline-block;
+   text-align: center;
+   border-radius: 7px;
+   height: 50px;
+   margin: 10px 10px;
+ }
+
+ .btn a {
+   display: inline-block;
+   text-decoration: none;
+   color: white;
+   font-size: 20px;
+   font-weight: bold;
+   padding: 10px 30px;
+ }
+
+ .btn:hover {
+   background-color: rgba(119, 250, 206,1);
+ }
+
+ .btn-sign-up {
+   
+ }
+
+/**************************************** middle ***********************************************/
+
+ .middle-contents {
+   height: 800px;
+   background-color: rgb(236, 236, 236); /* 一時的な背景色の変更　白に戻す */
+ }
+
+ .middle-container {
+   margin: 0px 12px;
+ }
+
+ .middle-text {
+   color: white;
+   text-align: center;
+   padding-top: 50px;
+ }
+
+ /************************************* no used ***********************************************/
