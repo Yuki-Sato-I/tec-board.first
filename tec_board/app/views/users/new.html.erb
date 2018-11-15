@@ -1,3 +1,42 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<div class="login-form">
+  <h1>新規登録</h1> 
   
+  <% if @user.errors.any? %>
+    <div class = "errors">
+      <div class ="error-alert">
+        <% if @user.errors.any? %>
+          <%= pluralize(@user.errors.count, "error") %><% "!" * @user.errors.count.to_i %>
+        <% end %>
+      </div>
+      <% if @user.errors.full_messages %>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+  
+  <div class="login-lists">
+    <ul>
+      <%= form_for(@user,url: users_path) do |f| %>
+        <li>
+          <%= f.label :name , "ユーザーネーム"%>
+          <%= f.text_field :name %>
+        </li>
+        <li>
+          <%= f.label :email , "emailアドレス"%>
+          <%= f.email_field :email %>
+        </li>
+        <li>
+          <%= f.label :password ,"パスワード"%>
+          <%= f.password_field :password %>
+        </li>
+        <li>
+          <%= f.label :password_confirmation , "パスワード（確認）" %> 
+          <%= f.password_field :password_confirmation %>
+        </li>
+          <%= f.submit "アカウント作成", class: "" %>
+      <% end %>
+    </ul>  
+  </div>
+</div>

@@ -1,3 +1,57 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+//*************************  new  **************************//
+.login-form {
+  background-color: rgb(240, 240, 240);
+  padding-bottom: 15px;
+}
+
+.errors{
+  list-style: none;
+  color: red;
+  text-align: center;
+}
+
+.error-alert {
+  background-color: rgb(241, 173, 173);
+  height: 50px;
+  font-size: 30px;
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 5px;
+  color: rgb(119, 37, 37);
+}
+
+
+.login-form h1 {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.login-lists {
+  margin: 0px 12px;
+}
+
+.login-lists label {
+  display: block;
+}
+
+.login-lists ul {
+  padding: 0 0;
+  text-align: center;
+  margin: 0 30px;
+}
+
+.login-lists li {
+  list-style: none;
+  display: block;
+  margin: 50px 0px;
+}
+
+.login-lists input{
+  width: 40%;
+  font-size: 20px;
+  height: 35px;
+  border-radius: 3px;
+}

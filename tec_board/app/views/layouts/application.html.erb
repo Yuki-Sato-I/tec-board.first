@@ -8,6 +8,11 @@
 
   <body>
     <%= render 'layouts/header' %>
+    <% if flash[:sucess] %>
+      <div class="flash">
+        <h1><%= flash[:sucess] %></h1>
+      </div>
+    <% end %>
     <%= yield %>
     <%= render 'layouts/footer' %>
     <%= debug(params) if Rails.env.development? %>
