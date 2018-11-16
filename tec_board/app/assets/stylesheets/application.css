@@ -13,14 +13,16 @@
  *= require_tree .
  *= require_self
  */
-
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
  body {
    margin: 0px 0px;
+   margin-top: 70px;
  }
 
 /************************************ header ********************************************/
 .header-background {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 1);
   position: Fixed;
     top: 0px;
     left: 0px; 
@@ -109,7 +111,7 @@
  }
 
 /**********************************  flash  *********************************/
- .flash {
+ .flash-s {
    background-color: rgb(163, 253, 168);
    width: 80%;
    text-align: center;
@@ -118,6 +120,19 @@
    height: 50px; 
    border-radius: 3px;
  }
- .flash h1 {
+ .flash-s h1 {
    color: rgba(64, 241, 87, 0.8);
  }
+
+ .flash-d {
+  background-color: rgb(241, 153, 153);
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 70px;
+  height: 50px; 
+  border-radius: 3px;
+}
+.flash-d h1 {
+  color: rgba(211, 28, 28, 0.8);
+}

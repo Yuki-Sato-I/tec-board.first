@@ -2,8 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //*************************  new  **************************//
-.login-form {
-  background-color: rgb(240, 240, 240);
+.signup-form {
   padding-bottom: 15px;
 }
 
@@ -17,39 +16,45 @@
   background-color: rgb(241, 173, 173);
   height: 50px;
   font-size: 30px;
-  width: 40%;
+  width: 25%;
   margin: 0 auto;
   border-radius: 5px;
   color: rgb(119, 37, 37);
 }
 
 
-.login-form h1 {
+.signup-form h1 {
   padding-top: 50px;
   text-align: center;
 }
 
-.login-lists {
+.signup-lists {
   margin: 0px 12px;
 }
 
-.login-lists label {
+.signup-lists label {
   display: block;
 }
 
-.login-lists ul {
+.signup-lists ul {
   padding: 0 0;
   text-align: center;
   margin: 0 30px;
 }
 
-.login-lists li {
+.signup-lists li {
   list-style: none;
   display: block;
   margin: 50px 0px;
 }
 
-.login-lists input{
+.signup-lists label {
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+.signup-lists input{
   width: 40%;
   font-size: 20px;
   height: 35px;

@@ -1,11 +1,21 @@
 <div class="header-background">
   <div class="header-container">
     <div class="header-logo">
-      <%= link_to("TecBoard","/") %>
+      <% if current_user %>
+        <%= link_to("TecBoard", user_path(current_user)) %>
+      <% else %>
+        <%= link_to("TecBoard","/") %>
+      <% end %>
     </div>
     <ul class="header-right">
       <li><%= link_to("TecBoardとは", about_path) %></li>
-      <li><%= link_to("新規登録",new_user_path) %></li>
-      <li><%= link_to("ログイン","#") %></li>
+      <% if logged_in? %>
+        <li><%= link_to("Profile", current_user) %></li>
+        <li><%= link_to("Settings", '#') %></li>
+        <li><%= link_to "Log out", logout_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to("新規登録",new_user_path) %></li>
+        <li><%= link_to("ログイン",login_path) %></li>
+      <% end %>
   </div> 
 </div>

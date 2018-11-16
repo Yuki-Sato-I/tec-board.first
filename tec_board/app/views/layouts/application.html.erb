@@ -9,12 +9,18 @@
   <body>
     <%= render 'layouts/header' %>
     <% if flash[:sucess] %>
-      <div class="flash">
+      <div class="flash-s">
         <h1><%= flash[:sucess] %></h1>
       </div>
     <% end %>
+    <% if flash.now[:danger] %>
+      <div class="flash-d">
+        <h1><%= flash.now[:danger] %></h1>
+      </div>
+    <% end %>
+     
     <%= yield %>
     <%= render 'layouts/footer' %>
-    <%= debug(params) if Rails.env.development? %>
+    <%= debug(params) if Rails.env.development? %> <!-- バグ発見よう -->
   </body>
 </html>
