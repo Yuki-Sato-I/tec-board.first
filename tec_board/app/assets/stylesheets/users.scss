@@ -2,9 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //*************************  new  **************************//
-.signup-form {
-  padding-bottom: 15px;
-}
 
 .errors{
   list-style: none;
@@ -22,41 +19,14 @@
   color: rgb(119, 37, 37);
 }
 
+/************************** index ************************/
 
-.signup-form h1 {
-  padding-top: 50px;
-  text-align: center;
-}
-
-.signup-lists {
-  margin: 0px 12px;
-}
-
-.signup-lists label {
-  display: block;
-}
-
-.signup-lists ul {
-  padding: 0 0;
-  text-align: center;
-  margin: 0 30px;
-}
-
-.signup-lists li {
+.users {
   list-style: none;
-  display: block;
-  margin: 50px 0px;
-}
-
-.signup-lists label {
-  font-size: 20px;
-  font-weight: bold;
-
-}
-
-.signup-lists input{
-  width: 40%;
-  font-size: 20px;
-  height: 35px;
-  border-radius: 3px;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid lightgray;
+  }
 }

@@ -8,9 +8,9 @@
 
   <body>
     <%= render 'layouts/header' %>
-    <% if flash[:sucess] %>
+    <% if flash[:success] %>
       <div class="flash-s">
-        <h1><%= flash[:sucess] %></h1>
+        <h1><%= flash[:success] %></h1>
       </div>
     <% end %>
     <% if flash.now[:danger] %>

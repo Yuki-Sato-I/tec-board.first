@@ -17,7 +17,7 @@
  @import "bootstrap";
  body {
    margin: 0px 0px;
-   margin-top: 70px;
+   margin-top: 65px;
  }
 
 /************************************ header ********************************************/
@@ -61,6 +61,7 @@
   text-decoration: none;
   color: white;
   opacity: 0.7;
+  font-size: larger;
 }
 
 .header-right a:hover{
@@ -75,6 +76,7 @@
   margin-left: 10px;
   font-size: smaller;
   font-weight: lighter;
+  letter-spacing: 1.5px;
  }
 
 
@@ -135,4 +137,36 @@
 }
 .flash-d h1 {
   color: rgba(211, 28, 28, 0.8);
+}
+
+/************************************  form  **********************************/
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+input {
+  height: auto !important;
+}
+
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.checkbox span {
+  margin-left: 20px;
+  font-weight: normal;
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }

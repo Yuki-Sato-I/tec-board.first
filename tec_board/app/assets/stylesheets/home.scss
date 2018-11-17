@@ -35,7 +35,7 @@
    text-align: center;
  }
 
- .btn {
+ .btn1 {
    background-color: rgba(119, 250, 206,0.8);
    display: inline-block;
    text-align: center;
@@ -44,7 +44,7 @@
    margin: 10px 10px;
  }
 
- .btn a {
+ .btn1 a {
    display: inline-block;
    text-decoration: none;
    color: white;
@@ -53,13 +53,14 @@
    padding: 10px 30px;
  }
 
- .btn:hover {
+ .btn1:hover {
    background-color: rgba(119, 250, 206,1);
  }
-
- .btn-sign-up {
-   
+ .btn1 a:hover{
+  color: white;
+  text-decoration: none;
  }
+
 
 /**************************************** middle ***********************************************/
 
