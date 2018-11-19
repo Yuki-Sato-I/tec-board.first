@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+  before_action :logged_in_user
   def index
     @group = Group.find_by(id: params[:id])
   end
@@ -7,6 +8,8 @@ class GroupsController < ApplicationController
   end
 
   def member
+    @group = Group.find_by(id: params[:id])
+    @members = @group.users
   end
 
   def picture
@@ -35,5 +38,12 @@ class GroupsController < ApplicationController
   private
     def group_params
       params.require(:group).permit(:name)
+    end
+
+    def logged_in_user
+      unless logged_in?
+        flash[:danger] = "ログインしてください."
+        redirect_to login_url
+      end
     end
 end

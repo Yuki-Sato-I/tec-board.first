@@ -1,2 +1,9 @@
-<h1>Groups#member</h1>
-<p>Find me in app/views/groups/member.html.erb</p>
+<div class="members-container">
+  <h1><%= @group.name %>のメンバー</h1>
+  <% @members.each do |member| %>
+    <div class="members-name">
+      <%= image_tag "/user_images/#{member.image_name}", :size => '100x100' %>
+      <%= link_to("#{member.name}","/users/#{member.id}") %>
+    </div>
+  <% end %>
+</div>
