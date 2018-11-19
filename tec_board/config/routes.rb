@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  #################  groups_controller  ##################
+  get '/groups/new', to:'groups#new'
+  get '/groups/board',to:'groups#board'
+  get '/groups/member',to:'groups#member'
+  get '/groups/picture',to:'groups#picture'
+  get '/groups/chat',to:'groups#chat'
+  post '/group', to: 'groups#create'
+  get '/groups/:id',to:'groups#index' 
+
   #################  home_controller  #####################
   get '/' ,to: 'home#top'
   get '/about', to: 'home#about' #about_path, about_url

@@ -30,3 +30,56 @@
     border-bottom: 1px solid lightgray;
   }
 }
+
+/*************************** my-profile *********************/
+.profile-contents {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  p{
+    font-weight: bold;
+    font-size: 40px;
+  }
+}
+
+.profile-contents img {
+  margin-top: 50px;
+}
+
+.btn2 {
+  display: inline-block;
+  padding: 20px 50px;
+  background-color: rgba(127, 252, 210, 0.8);
+  border-radius: 8px;
+  width: 20%;
+  margin: 20px 10px;
+}
+
+.prof-btn-wrapper a{
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}
+.prof-btn-wrapper a:hover{
+  background-color: rgba(127, 252, 210, 1);
+  color: white;
+  text-decoration: none;
+}
+
+.my-groups {
+  font-size: 40px;
+  text-align: left;
+  h1{
+    font-weight: bold;
+  }
+}
+
+.group-name {
+  display: block;
+  padding: 10px 5px;
+  text-align: left;
+  span {
+    border: 2px solid black;
+    font-size: 5px;
+  }
+}

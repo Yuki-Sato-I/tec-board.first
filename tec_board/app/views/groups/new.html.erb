@@ -1,0 +1,7 @@
+<%= form_for(@group, url: group_path) do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit "作成" %>
+<% end %>

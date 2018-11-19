@@ -1,0 +1,55 @@
+// Place all the styles related to the groups controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*************************  index  ***************************/
+
+ .group-container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  h1 {
+    font-weight: bolder;
+    font-size: 70px;
+  }
+ }
+
+ .group-btn-wrapper {
+   width: 60%;
+   margin: 0 auto;
+   a {
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 50px 0px;
+    &:hover{
+      background-color: rgba(127, 255, 212,1);
+      text-align: center;
+      color: white;
+      text-decoration: none;
+    }
+  }
+ }
+
+ .group-btn {
+  background-color: rgba(127, 255, 212,0.8);
+  border-radius: 15px;
+  padding: 20px 40px;
+  width: 250px;
+  height: 150px;
+  display: inline-block;
+  margin: 15px 5px;
+
+ }
+
+ .admin-user {
+   width: 90%;
+   text-align: right;
+   margin: 0 auto;
+   a {
+    border-radius: 5px;
+    padding: 8px 15px;
+    background-color: aqua;
+   }
+ }

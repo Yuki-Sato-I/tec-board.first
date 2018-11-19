@@ -1,0 +1,22 @@
+<div class="profile-body">
+  <div class="profile-contents">
+    <%= image_tag "/user_images/#{@user.image_name}", :size => '150x150' %>
+    <p><%= @user.name %></p>
+    <div class="prof-btn-wrapper">
+      <%= link_to("New Group",'/groups/new',class: "btn2") %>
+      <%= link_to("invited group","#", class: "btn2") %>
+    </div>
+    <div class="my-groups">
+      <h1>参加済のグループ</h1>
+      <% @user.groups.each do |group| %> <!-- 表示されない('＃')  -->
+        <div class="group-name">
+          <% if current_user.id == group.admin_user_id %>
+            <span>管理人</span>
+          <% end %>
+          <%= link_to("#{group.name}", "/groups/#{group.id}") %>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>

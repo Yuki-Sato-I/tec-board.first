@@ -1,4 +1,9 @@
 class User < ApplicationRecord
+  has_many :user_groups    #順番大事！！！！
+  has_many :groups, through: :user_groups
+
+
+  
   attr_accessor :remember_token
   before_save {self.email = email.downcase}
   validates :name,  presence: {message: 'は,必須項目です.'}, length: { maximum: 50 }

@@ -1,0 +1,16 @@
+<div class="group-body">
+  <div class="group-container">
+    <h1><%= @group.name %></h1>
+    <div class="group-btn-wrapper">
+    <%= link_to("掲示板","#",class:"group-btn") %>
+    <%= link_to("メンバー","#",class:"group-btn") %>
+    <%= link_to("写真","#",class:"group-btn") %>
+    <%= link_to("チャット","#" ,class:"group-btn") %>
+    </div>
+  </div>
+  <% if current_user.id == @group.admin_user_id %>
+    <div class="admin-user">
+      <%= link_to("管理人用ページ","#") %>
+    </div>
+  <% end %>
+</div>
