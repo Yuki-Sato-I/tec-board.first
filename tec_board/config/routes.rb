@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  ################  boards_controller  #####################
+  get '/boards/:group_id/new', to:'boards#new'
+  get '/boards/:group_id/show/:id', to:'boards#show'
+  get '/boards/:group_id/index', to:'boards#index' #ここまで変更した
+  get '/boards/:group_id/edit/:id', to:'boards#edit'
+  post '/boards/:group_id', to:'boards#create'
+  patch '/boards/:group_id/:id' ,to:'boards#update'
+  delete '/boards/:group_id/:id' ,to:'boards#destroy'
+
   #################  groups_controller  ##################
   get '/groups/new', to:'groups#new'
   get '/groups/board',to:'groups#board'

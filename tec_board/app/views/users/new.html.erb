@@ -1,5 +1,5 @@
 <h1>新規登録</h1> 
-<% if @user.errors.any? %>
+<!-- <% if @user.errors.any? %>
   <div class = "errors">
     <div class ="error-alert">
       <% if @user.errors.any? %>
@@ -12,11 +12,12 @@
       <% end %>
       <% end %>
   </div>
-<% end %>
+<% end %> -->
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@user,url: users_path) do |f| %>
+      <%= render 'shared/error_messages' %>
       <%= f.label :name , "ユーザーネーム"%>
       <%= f.text_field :name %>
     

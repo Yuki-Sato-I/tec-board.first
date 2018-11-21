@@ -2,7 +2,7 @@
   <div class="group-container">
     <h1><%= @group.name %></h1>
     <div class="group-btn-wrapper">
-    <%= link_to("掲示板","#",class:"group-btn") %>
+    <%= link_to("掲示板","/boards/#{@group.id}/index",class:"group-btn") %>
     <%= link_to("メンバー","/groups/member/#{@group.id}",class:"group-btn") %>
     <%= link_to("写真","#",class:"group-btn") %>
     <%= link_to("チャット","#" ,class:"group-btn") %>

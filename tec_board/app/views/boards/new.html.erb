@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@board,url: "/boards/#{params[:group_id]}") do |f| %>
+      <%= f.label :title , "タイトル"%>
+      <%= f.text_field :title %>
+      <%= f.label :content , "内容" %>
+      <%= f.text_area :content , class: "input-mysize" %>
+      <%= f.submit "掲示作成", class: "btn btn-primary" %>
+    <% end %>
+  </div>  
+</div>

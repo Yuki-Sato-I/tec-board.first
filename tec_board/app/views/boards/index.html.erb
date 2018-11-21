@@ -1,0 +1,18 @@
+<div class="board-h1">
+  <h1>掲示板</h1>
+  <% if @group.admin_user_id == current_user.id %>
+    <span><%= link_to("新規投稿", "/boards/#{@group.id}/new") %></span>
+  <% end %>
+</div>
+<% @boards.order("updated_at DESC").each do |board| %>
+  <div class="board">
+    <h1><%= link_to("#{board.title}","/boards/#{@group.id}/show/#{board.id}") %></h1>
+    <div class="board-time">
+      <%= (board.updated_at + 60*60*9).strftime("%Y-%m-%d %H:%M")%>
+    </div>
+    <% if @group.admin_user_id == current_user.id %>
+      <span><%= link_to("削除", "/boards/#{@group.id}/#{board.id}", method: :delete,data: { confirm: "削除して宜しいですか?" }) %>
+      |<%= link_to("編集","/boards/#{@group.id}/edit/#{board.id}") %></span>
+    <% end %>
+  </div>
+<% end %>
