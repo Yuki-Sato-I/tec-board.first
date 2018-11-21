@@ -10,7 +10,8 @@ Rails.application.routes.draw do
 
   #################  groups_controller  ##################
   get '/groups/new', to:'groups#new'
-  get '/groups/board',to:'groups#board'
+  get '/groups/invited',to:'groups#invited'
+  post '/groups/permission', to:'groups#permission'
   get '/groups/member/:id',to:'groups#member'
   get '/groups/picture',to:'groups#picture'
   get '/groups/chat',to:'groups#chat'
