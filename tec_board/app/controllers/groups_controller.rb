@@ -13,7 +13,7 @@ class GroupsController < ApplicationController
     if @group = Group.find_by(invitation_code: params[:invite][:invitation_code]) ##ここがおかしい id だとできる　invitation_code にするとダメ
       if @user.user_groups.find_by(user_id: @user.id, group_id: @group.id) != nil
         flash[:danger] = "すでに参加しています."
-        redirect_to @user and return
+        redirect_to @user and return #returnすれば　ここで動作を終える
       end
       @user.user_groups.create(user_id: @user.id, group_id: @group.id)
       flash[:success] = "#{@group.name}に参加しました."
@@ -60,7 +60,7 @@ class GroupsController < ApplicationController
 
     #def invite_params
      # params.require(:group).permit(:invitation_code)
-    #end
+    #end #これだとうまくいかなかった　なんで？
 
     def logged_in_user
       unless logged_in?

@@ -8,7 +8,7 @@
   <div class="board">
     <h1><%= link_to("#{board.title}","/boards/#{@group.id}/show/#{board.id}") %></h1>
     <div class="board-time">
-      <%= (board.updated_at + 60*60*9).strftime("%Y-%m-%d %H:%M")%>
+      <%= (board.updated_at + 60*60*9).strftime("%Y-%m-%d %H:%M") %> <!-- 変な奴消すためSTC -->
     </div>
     <% if @group.admin_user_id == current_user.id %>
       <span><%= link_to("削除", "/boards/#{@group.id}/#{board.id}", method: :delete,data: { confirm: "削除して宜しいですか?" }) %>

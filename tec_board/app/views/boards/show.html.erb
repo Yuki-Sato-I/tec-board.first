@@ -1,4 +1,5 @@
 <div class="board-content">
   <h1><%= @board.title %></h1>
   <p><%= simple_format(@board.content) %></p><!-- 改行を出力する為 -->
+  <div class="board-update"><%= (@board.updated_at + 60*60*9).strftime("%Y-%m-%d %H:%M") %></div>
 </div>
