@@ -1,0 +1,12 @@
+<h1 class="title">投稿編集</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@album,url: "/albums/#{@group.id}/#{@album.id}") do |f| %>
+      <%= f.label :title , "タイトル"%>
+      <%= f.text_field :title %>
+      <%= f.label :content , "内容" %>
+      <%= f.text_area :content , class: "input-mysize" %>
+      <%= f.submit "編集", class: "btn btn-primary" %>
+    <% end %>
+  </div>  
+</div>

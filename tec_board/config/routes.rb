@@ -1,8 +1,17 @@
 Rails.application.routes.draw do
+  ################  albums_controller  ################
+  get '/albums/:group_id/new', to:'albums#new'
+  get '/albums/:group_id/show/:id', to:'albums#show'
+  get '/albums/:group_id/index', to:'albums#index'
+  get '/albums/:group_id/edit/:id', to:'albums#edit'
+  post '/albums/:group_id', to:'albums#create'
+  patch '/albums/:group_id/:id' ,to:'albums#update'
+  delete '/albums/:group_id/:id' ,to:'albums#destroy'
+  
   ################  boards_controller  #####################
   get '/boards/:group_id/new', to:'boards#new'
   get '/boards/:group_id/show/:id', to:'boards#show'
-  get '/boards/:group_id/index', to:'boards#index' #ここまで変更した
+  get '/boards/:group_id/index', to:'boards#index'
   get '/boards/:group_id/edit/:id', to:'boards#edit'
   post '/boards/:group_id', to:'boards#create'
   patch '/boards/:group_id/:id' ,to:'boards#update'

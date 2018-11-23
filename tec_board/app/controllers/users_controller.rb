@@ -2,8 +2,9 @@ class UsersController < ApplicationController
   before_action :logged_in_user,only:[:edit,:update,:index,:destroy]
   before_action :correct_user, only:[:edit,:update]
   before_action :admin_user, only: :destroy
+  PER = 5
   def index
-    @users = User.all
+    @users = User.page(params[:page]).per(PER)
   end
 
   def show

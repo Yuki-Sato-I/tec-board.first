@@ -4,6 +4,7 @@
     <span><%= link_to("新規投稿", "/boards/#{@group.id}/new") %></span>
   <% end %>
 </div>
+<%= paginate @boards %>
 <% @boards.order("updated_at DESC").each do |board| %>
   <div class="board">
     <h1><%= link_to("#{board.title}","/boards/#{@group.id}/show/#{board.id}") %></h1>

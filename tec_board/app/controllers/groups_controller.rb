@@ -23,10 +23,10 @@ class GroupsController < ApplicationController
       render 'invited'
     end
   end
-
+  PER = 5
   def member
     @group = Group.find_by(id: params[:id])
-    @members = @group.users
+    @members = @group.users.page(params[:page]).per(PER)
   end
 
   def picture

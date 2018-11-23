@@ -1,8 +1,9 @@
 class BoardsController < ApplicationController
   before_action :logged_in_user
+  PER = 5
   def index
-    @boards = Group.find(params[:group_id]).boards
     @group = Group.find_by(id: params[:group_id])
+    @boards = @group.boards.page(params[:page]).per(PER)
   end
 
   def show
@@ -32,7 +33,7 @@ class BoardsController < ApplicationController
     @board = @group.boards.find(params[:id])
     if @board.update_attributes(board_params)
       flash[:success] = "編集が完了しました."
-      redirect_to "/boards/#{@group.id}/index"
+      redirect_to "/boards/#{@group.id}/show/#{@board.id}"
     else
       render 'edit'
     end

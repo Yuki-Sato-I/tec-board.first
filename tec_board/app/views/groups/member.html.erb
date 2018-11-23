@@ -1,5 +1,6 @@
 <div class="members-container">
   <h1><%= @group.name %>のメンバー</h1>
+  <%= paginate @members %>
   <% @members.each do |member| %>
     <div class="members-name">
       <% if member.image_name.url %>

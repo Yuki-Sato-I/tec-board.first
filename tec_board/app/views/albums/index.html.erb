@@ -1,0 +1,15 @@
+<h1 class="title">アルバム</h1>
+<%= link_to("新規投稿", "/albums/#{@group.id}/new") %>
+<%= paginate @albums %>
+<div class="album-container">
+  <% @albums.order("updated_at DESC").each do |album| %>
+    <div class="album">
+      <h1><%= link_to "#{album.title}","/albums/#{@group.id}/show/#{album.id}" %></h1>
+      <%= image_tag album.images.first.url %>
+      <!-- <p><%= album.content %></p> -->
+      <!--  <% album.images.each do |image| %>
+        <%= image_tag image.url %>
+      <% end %> -->
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,24 @@
+// Place all the styles related to the Albums controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*********************  index  *******************/
+.album-container {
+  margin: 0 20px;
+  text-align: center;
+}
+
+.album {
+  width: 95%;
+  margin: 0 auto;
+  border: 2px solid black;
+  margin-bottom: 5px;
+  h1 {
+    border-bottom: 1px solid lightgray;
+    padding: 7px 0px;
+    margin: 0 auto;
+  }
+  img {
+    width: 80%;
+  }
+}

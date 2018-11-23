@@ -4,7 +4,7 @@
     <div class="group-btn-wrapper">
     <%= link_to("掲示板","/boards/#{@group.id}/index",class:"group-btn") %>
     <%= link_to("メンバー","/groups/member/#{@group.id}",class:"group-btn") %>
-    <%= link_to("写真","#",class:"group-btn") %>
+    <%= link_to("写真","/albums/#{@group.id}/index",class:"group-btn") %>
     <%= link_to("チャット","#" ,class:"group-btn") %>
     </div>
   </div>
