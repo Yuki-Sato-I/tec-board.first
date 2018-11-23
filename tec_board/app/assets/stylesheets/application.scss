@@ -17,7 +17,7 @@
  @import "bootstrap";
  body {
    margin: 0px 0px;
-   margin-top: 80px;
+   margin-top: 69px;
  }
 
 /************************************ header ********************************************/
@@ -185,3 +185,14 @@ input {
     color: $state-danger-text;
   }
 }
+
+/*************** bootstrap *********************/
+
+ .btn {
+   background-color: rgba(127, 255, 212,0.8);
+   border-color: rgb(68, 248, 188);
+   &:hover{
+    background-color: rgba(127, 255, 212,1);
+    border-color: rgb(68,248,188);
+   }
+ }

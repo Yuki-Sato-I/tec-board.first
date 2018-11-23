@@ -16,8 +16,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.image_name = "default.jpg"
-    #if @user.id == "1"  ###最初に登録したものを管理者にする
+    # @user.image_name = "default.jpg"
+    #if @user.id == "1"  ###最初に登録したものを管理者にする　まだsaveしてないから無理
      #@user.update_attribute(admin: true)
     #end
     if @user.save
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find_by(id: params[:id])
-    if @user.update_attributes(user_params)
+    if @user.update(user_param)
       flash[:success] = "編集が完了しました."
       redirect_to @user
     else
@@ -51,7 +51,10 @@ class UsersController < ApplicationController
 
 
   private
-
+    def user_param
+      params.require(:user).permit(:name,:image_name)
+    end
+    
     def user_params
       params.require(:user).permit(:name,:email,:password,:password_confirmation,:image_name) #4つだけ許可
     end

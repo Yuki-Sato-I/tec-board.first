@@ -6,18 +6,24 @@
       <%= render 'shared/error_messages' %>
       <%= f.label :name ,"ユーザーネーム"%>
       <%= f.text_field :name, class: 'form-control' %>
-
-      <%= f.label :email ,"Emailアドレス"%>
-      <%= f.email_field :email, class: 'form-control' %>
-
+      <h5>メールアドレス</h5>
+      <p><%= @user.email %></p>
+<!--
       <%= f.label :password, "パスワード" %>
       <%= f.password_field :password, class: 'form-control' %>
 
       <%= f.label :password_confirmation, "パスワード（確認）" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
+-->
+      <%= f.label :image_name, "トプ画"%>
+      <%= f.file_field :image_name %>
 
       <%= f.submit "変更する", class: "btn btn-primary" %>
     <% end %>
   </div>
-  <%= image_tag "/user_images/#{@user.image_name}", :size => '100x100' %>
+  <% if @user.image_name.url %>
+    <%= image_tag @user.image_name.url, :size => '100x100' %>
+  <% else %>
+    <%= image_tag "/user_images/default.jpg", :size => '100x100' %>
+  <% end %>
 </div>

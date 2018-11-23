@@ -2,7 +2,11 @@
   <h1><%= @group.name %>のメンバー</h1>
   <% @members.each do |member| %>
     <div class="members-name">
-      <%= image_tag "/user_images/#{member.image_name}", :size => '100x100' %>
+      <% if member.image_name.url %>
+        <%= image_tag member.image_name.url ,size: "100x100" %>
+      <% else %>
+        <%= image_tag "/user_images/default.jpg", :size => '100x100' %>
+      <% end %>
       <%= link_to("#{member.name}","/users/#{member.id}") %>
     </div>
   <% end %>

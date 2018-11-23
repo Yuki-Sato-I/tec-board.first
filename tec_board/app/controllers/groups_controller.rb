@@ -12,14 +12,14 @@ class GroupsController < ApplicationController
     @user = current_user
     if @group = Group.find_by(invitation_code: params[:invite][:invitation_code]) ##ここがおかしい id だとできる　invitation_code にするとダメ
       if @user.user_groups.find_by(user_id: @user.id, group_id: @group.id) != nil
-        flash[:danger] = "すでに参加しています."
+        flash.now[:danger] = "すでに参加しています."
         redirect_to @user and return #returnすれば　ここで動作を終える
       end
       @user.user_groups.create(user_id: @user.id, group_id: @group.id)
       flash[:success] = "#{@group.name}に参加しました."
       redirect_to @user
     else
-      flash[:danger] = "招待コードが間違っています."
+      flash.now[:danger] = "招待コードが間違っています."
       render 'invited'
     end
   end
