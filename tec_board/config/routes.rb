@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   post '/albums/:group_id', to:'albums#create'
   patch '/albums/:group_id/:id' ,to:'albums#update'
   delete '/albums/:group_id/:id' ,to:'albums#destroy'
-  
+
   ################  boards_controller  #####################
   get '/boards/:group_id/new', to:'boards#new'
   get '/boards/:group_id/show/:id', to:'boards#show'
@@ -23,7 +23,8 @@ Rails.application.routes.draw do
   post '/groups/permission', to:'groups#permission'
   get '/groups/member/:id',to:'groups#member'
   get '/groups/picture',to:'groups#picture'
-  get '/groups/chat',to:'groups#chat'
+  get '/groups/:group_id/chat',to:'groups#chat'
+  post '/groups/:group_id/chat',to:'groups#chat_create' 
   post '/group', to: 'groups#create'
   get '/groups/:id',to:'groups#index' 
 

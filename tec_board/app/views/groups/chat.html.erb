@@ -1,2 +1,39 @@
-<h1>Groups#chat</h1>
-<p>Find me in app/views/groups/chat.html.erb</p>
+<h1 class="title">Groups chat</h1>
+<% if @chats != nil %>
+  <div class="chat-container">
+    <div class="chat-room", style="width:95%; height:500px; overflow:auto;">
+      <% @chats.each do |chat| %>
+        <% @user_chat = User.find_by(id: chat.user_id) %> <!-- belongs_toを使ったらうまくいかなかった。 -->
+        
+        <% if @user_chat.image_name.url != nil %>
+          <% user_image = @user_chat.image_name.url %>
+        <% else %>
+          <% user_image = "/user_images/default.jpg" %>
+        <% end %>
+
+        <% if chat.user_id == @user.id %> 
+          <div class="me">
+            <p><span class="name"><%= @user_chat.name %></span><%= image_tag user_image, size: '20x20' %></p>
+        <% else %>
+          <div class="other">
+            <p><%= image_tag user_image, size: '20x20' %><span class="name"><%= @user_chat.name %></span></p>
+        <% end %>
+            <p><%= chat.content %></p>
+            <span><%= chat.created_at.strftime("%Y-%m-%d %H:%M") %></span>
+          </div>
+
+
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@chat,url: "/groups/#{@group.id}/chat") do |f| %>
+      <%= f.label :content %>
+      <%= f.text_field :content %>
+      <%= f.submit "送信" , class: "btn btn-primary"%>
+    <% end %>
+  </div>
+</div>

@@ -23,7 +23,9 @@ class GroupsController < ApplicationController
       render 'invited'
     end
   end
+
   PER = 5
+
   def member
     @group = Group.find_by(id: params[:id])
     @members = @group.users.page(params[:page]).per(PER)
@@ -32,7 +34,25 @@ class GroupsController < ApplicationController
   def picture
   end
 
-  def chat
+  def chat 
+    @user = current_user
+    @chat = Chat.new
+    @group = Group.find(params[:group_id])
+    @chats = @group.chats
+
+  end
+
+  def chat_create
+    @user = current_user
+    @chat = @user.chats.new(chat_params)
+    @group = Group.find(params[:group_id])
+    @chat.group_id = @group.id
+    if @chat.save
+      redirect_to "/groups/#{@group.id}/chat"
+    else
+      flash.now[:danger] = "失敗"
+      redirect_to "/groups/#{@group.id}/chat"
+    end
   end
 
   def new
@@ -58,6 +78,9 @@ class GroupsController < ApplicationController
       params.require(:group).permit(:name)
     end
 
+    def chat_params
+      params.require(:chat).permit(:content)
+    end
     #def invite_params
      # params.require(:group).permit(:invitation_code)
     #end #これだとうまくいかなかった　なんで？

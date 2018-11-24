@@ -69,6 +69,34 @@
    border-top: 1px solid lightgray;
  }
 
- /******************** new *************************/
+ /******************** chat *************************/
+ .chat-container {
+   width: 50%;
+   margin: 0 auto;
+ }
 
+ .chat-room {
+    margin: 0 auto;
+    border: 1px solid black; 
+    padding: 10px;
+    p { 
+      font-size: 15px;
+      font-weight: bolder;
+      margin: 0;
+    }
+    span {
+      font-size: 5px;
+      color: lightgray;
+      font-weight: normal;
+    }
+    .me {
+      display: block;
+      text-align: right;
+      padding: 2px 0;
+    }
+    .name {
+      font-size: 7px;
+      color: black;
+    }
+  }
  

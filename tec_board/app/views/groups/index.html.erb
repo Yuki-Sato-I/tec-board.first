@@ -5,7 +5,7 @@
     <%= link_to("掲示板","/boards/#{@group.id}/index",class:"group-btn") %>
     <%= link_to("メンバー","/groups/member/#{@group.id}",class:"group-btn") %>
     <%= link_to("写真","/albums/#{@group.id}/index",class:"group-btn") %>
-    <%= link_to("チャット","#" ,class:"group-btn") %>
+    <%= link_to("チャット","/groups/#{@group.id}/chat" ,class:"group-btn") %>
     </div>
   </div>
   <% if current_user.id == @group.admin_user_id %>

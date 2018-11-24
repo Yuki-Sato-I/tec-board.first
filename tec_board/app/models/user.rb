@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   has_many :user_groups    #順番大事！！！！
   has_many :groups, through: :user_groups
-
+  has_many :chats
   mount_uploader :image_name, ImageUploader
 
 
