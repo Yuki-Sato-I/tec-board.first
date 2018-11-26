@@ -4,18 +4,20 @@
     <title>TecBoard</title>
     <%= render 'layouts/first_config' %>
     <%= render 'layouts/shim' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   </head>
 
   <body>
     <%= render 'layouts/header' %>
     <% if flash[:success] %>
       <div class="flash-s">
-        <h1><%= flash[:success] %></h1>
+        <p><%= flash[:success] %></p>
       </div>
     <% end %>
     <% if flash.now[:danger] %>
       <div class="flash-d">
-        <h1><%= flash.now[:danger] %></h1>
+        <p><%= flash.now[:danger] %></p>
       </div>
     <% end %>
      

@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*********************  index  *******************/
+/*********************  show  *******************/
 .album-container {
   margin: 0 20px;
   text-align: center;
@@ -19,6 +19,17 @@
     margin: 0 auto;
   }
   img {
+    margin-top: 5px;
     width: 80%;
+  }
+}
+
+.scrol-picture {
+  width: 95%;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow-x: scroll;
+  div{
+    display: inline-block;
   }
 }

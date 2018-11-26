@@ -1,0 +1,97 @@
+/Library/Developer/CommandLineTools/usr/bin/make  all-recursive
+Making all in include
+Making all in libxml
+make[3]: Nothing to be done for `all'.
+make[3]: Nothing to be done for `all-am'.
+Making all in .
+  CC       SAX.lo
+  CC       entities.lo
+  CC       encoding.lo
+encoding.c:500:26: warning: cast from 'const unsigned char *' to 'unsigned short *' increases required alignment from 1 to 2 [-Wcast-align]
+    unsigned short* in = (unsigned short*) inb;
+                         ^~~~~~~~~~~~~~~~~~~~~
+encoding.c:582:27: warning: cast from 'unsigned char *' to 'unsigned short *' increases required alignment from 1 to 2 [-Wcast-align]
+    unsigned short* out = (unsigned short*) outb;
+                          ^~~~~~~~~~~~~~~~~~~~~~
+encoding.c:738:26: warning: cast from 'const unsigned char *' to 'unsigned short *' increases required alignment from 1 to 2 [-Wcast-align]
+    unsigned short* in = (unsigned short*) inb;
+                         ^~~~~~~~~~~~~~~~~~~~~
+encoding.c:824:27: warning: cast from 'unsigned char *' to 'unsigned short *' increases required alignment from 1 to 2 [-Wcast-align]
+    unsigned short* out = (unsigned short*) outb;
+                          ^~~~~~~~~~~~~~~~~~~~~~
+4 warnings generated.
+encoding.c:500:26: warning: cast from 'const unsigned char *' to 'unsigned short *' increases required alignment from 1 to 2 [-Wcast-align]
+    unsigned short* in = (unsigned short*) inb;
+                         ^~~~~~~~~~~~~~~~~~~~~
+encoding.c:582:27: warning: cast from 'unsigned char *' to 'unsigned short *' increases required alignment from 1 to 2 [-Wcast-align]
+    unsigned short* out = (unsigned short*) outb;
+                          ^~~~~~~~~~~~~~~~~~~~~~
+encoding.c:738:26: warning: cast from 'const unsigned char *' to 'unsigned short *' increases required alignment from 1 to 2 [-Wcast-align]
+    unsigned short* in = (unsigned short*) inb;
+                         ^~~~~~~~~~~~~~~~~~~~~
+encoding.c:824:27: warning: cast from 'unsigned char *' to 'unsigned short *' increases required alignment from 1 to 2 [-Wcast-align]
+    unsigned short* out = (unsigned short*) outb;
+                          ^~~~~~~~~~~~~~~~~~~~~~
+4 warnings generated.
+  CC       error.lo
+  CC       parserInternals.lo
+  CC       parser.lo
+  CC       tree.lo
+  CC       hash.lo
+  CC       list.lo
+  CC       xmlIO.lo
+  CC       xmlmemory.lo
+  CC       uri.lo
+  CC       valid.lo
+  CC       xlink.lo
+  CC       HTMLparser.lo
+  CC       HTMLtree.lo
+  CC       debugXML.lo
+  CC       xpath.lo
+  CC       xpointer.lo
+  CC       xinclude.lo
+  CC       nanohttp.lo
+  CC       nanoftp.lo
+  CC       catalog.lo
+  CC       globals.lo
+  CC       threads.lo
+  CC       c14n.lo
+  CC       xmlstring.lo
+  CC       buf.lo
+  CC       xmlregexp.lo
+  CC       xmlschemas.lo
+  CC       xmlschemastypes.lo
+  CC       xmlunicode.lo
+  CC       xmlreader.lo
+  CC       relaxng.lo
+  CC       dict.lo
+  CC       SAX2.lo
+  CC       xmlwriter.lo
+  CC       legacy.lo
+  CC       chvalid.lo
+  CC       pattern.lo
+  CC       xmlsave.lo
+  CC       xmlmodule.lo
+  CC       schematron.lo
+  CC       xzlib.lo
+  CCLD     libxml2.la
+  CC       testdso.lo
+  CCLD     testdso.la
+  CC       xmllint.o
+  CCLD     xmllint
+ld: warning: The i386 architecture is deprecated for macOS (remove from the Xcode build setting: ARCHS)
+ld: warning: ignoring file /usr/local/Cellar/xz/5.2.4/lib/liblzma.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/Cellar/xz/5.2.4/lib/liblzma.dylib
+Undefined symbols for architecture i386:
+  "_lzma_auto_decoder", referenced from:
+      _xz_head in libxml2.a(xzlib.o)
+  "_lzma_code", referenced from:
+      _xz_decomp in libxml2.a(xzlib.o)
+  "_lzma_end", referenced from:
+      ___libxml2_xzclose in libxml2.a(xzlib.o)
+  "_lzma_properties_decode", referenced from:
+      _is_format_lzma in libxml2.a(xzlib.o)
+ld: symbol(s) not found for architecture i386
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[2]: *** [xmllint] Error 1
+make[1]: *** [all-recursive] Error 1
+make: *** [all] Error 2

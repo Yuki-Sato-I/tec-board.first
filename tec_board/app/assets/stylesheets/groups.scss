@@ -31,6 +31,18 @@
     }
   }
  }
+ @media(max-width:670px){
+   .group-btn-wrapper{
+     margin: 0px 0px !important;
+     display: inline;
+   }
+
+   .group-container {
+     h1 {
+       font-size: 30px;
+     }
+   }
+ }
 
  .group-btn {
   background-color: rgba(127, 255, 212,0.8);
@@ -52,6 +64,10 @@
     padding: 8px 15px;
     background-color: aqua;
    }
+ }
+
+ .invite{
+   margin-left: 25px;
  }
 
 /*********************: member ***************************/
@@ -99,4 +115,11 @@
       color: black;
     }
   }
+
+  @media(max-width:670px){
+    .chat-container{
+      width: 90%;
+    }
+  }
+
  

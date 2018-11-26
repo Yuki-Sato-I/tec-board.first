@@ -5,18 +5,32 @@
         <%= link_to("TecBoard", user_path(current_user)) %>
       <% else %>
         <%= link_to("TecBoard","/") %>
-      <% end %>
+      <% end %>      
     </div>
     <ul class="header-right">
-      <li><%= link_to("TecBoardとは", about_path) %></li>
+      <li class="pc"><%= link_to("TecBoardとは", about_path) %></li>
       <% if logged_in? %>
-        <li><%= link_to("Myページ", current_user) %></li>
-        <li><%= link_to("編集", edit_user_path(current_user) ) %></li>
-        <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
+        <li class="pc"><%= link_to("Myページ", current_user) %></li>
+        <li class="pc"><%= link_to("編集", edit_user_path(current_user) ) %></li>
+        <li class="pc"><%= link_to "ログアウト", logout_path, method: :delete %></li>
       <% else %>
-        <li><%= link_to("新規登録",new_user_path) %></li>
-        <li><%= link_to("ログイン",login_path) %></li>
+        <li class="pc"><%= link_to("新規登録",new_user_path) %></li>
+        <li class="pc"><%= link_to("ログイン",login_path) %></li>
       <% end %>
+
+      <span class="dropdown-toggle" data-toggle="dropdown"><%= link_to "","#",class: "fa fa-align-justify" %></span>
+        <ul class="dropdown-menu">
+          <li><%= link_to("TecBoardとは", about_path) %></li>
+          <% if logged_in? %>
+            <li><%= link_to("Myページ", current_user) %></li>
+            <li><%= link_to("編集", edit_user_path(current_user) ) %></li>
+            <li class="divider"></li>
+            <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to("新規登録",new_user_path) %></li>
+            <li><%= link_to("ログイン",login_path) %></li>
+          <% end %>
+        </ul>
     </ul>
   </div> 
 </div>

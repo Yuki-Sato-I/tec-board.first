@@ -83,9 +83,26 @@
     border: 2px solid black;
     font-size: 5px;
   }
+  h1 {
+    display: inline-block;
+  }
 }
 
+@media(max-width:670px){
+  .g-title{
+    font-size: 30px;
+  }
+  .group-name h1{
+    font-size: 30px;
+  }
+}
+
+
 /******************  edit  ******************/
-.row h5 {
+ .row h5 {
   font-weight: bold;
+}
+ .my-top {
+   text-align: center;
+   margin: 0 auto;
 }

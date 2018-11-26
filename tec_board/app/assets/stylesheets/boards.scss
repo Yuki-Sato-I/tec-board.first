@@ -70,3 +70,11 @@
    text-align: right;
    color: gray;
  }
+
+ @media(max-width:670px){
+   .board-content{
+     h1{
+       font-size: 30px;
+     }
+   }
+ }

@@ -9,7 +9,7 @@ threads threads_count, threads_count
 
 # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
 #
-port        ENV.fetch("PORT") { 3000 }
+# port        ENV.fetch("PORT") { 3000 } ##############################################ここ消して見た
 
 # Specifies the `environment` that Puma will run in.
 #
@@ -40,7 +40,7 @@ threads threads_count, threads_count
 preload_app!
 
 rackup      DefaultRackup
-port        ENV['PORT']     || 3000
+port        ENV['PORT']     || 3001 ##なんか変だから 3001に変えといた　重複してたから
 environment ENV['RACK_ENV'] || 'development'
 
 on_worker_boot do

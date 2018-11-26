@@ -2,9 +2,11 @@
 <div class="album-container">
   <div class="album">
     <h1><%= @album.title %></h1>
-    <% @album.images.each do |image| %>
-        <%= image_tag image.url %>
-    <% end %>
+    <div class="scrol-picture">
+      <% @album.images.each do |image| %>
+          <div><%= image_tag image.url %></div>
+      <% end %>
+    </div>
     <p><%= @album.content %></p>
     <%= link_to "編集", "/albums/#{@group.id}/edit/#{@album.id}" %>
     |<%= link_to("削除", "/albums/#{@group.id}/#{@album.id}", method: :delete,data: { confirm: "削除して宜しいですか?" }) %>

@@ -13,16 +13,17 @@
         <%= link_to("invited group",'/groups/invited', class: "btn2") %>
       </div>
       <div class="my-groups">
-        <h1>参加済のグループ</h1>
-        <% @user.groups.each do |group| %> <!-- 表示されない('＃')  -->
+        <h1 class="g-title">参加済のグループ</h1>
+        <% @groups.each do |group| %> <!-- 表示されない('＃')  -->
           <div class="group-name">
             <% if current_user.id == group.admin_user_id %>
               <span>管理人</span>
             <% end %>
-            <%= link_to("#{group.name}", "/groups/#{group.id}") %>
+            <h1><%= link_to("#{group.name}", "/groups/#{group.id}") %></h1>
           </div>
         <% end %>
       </div>
+      <%= paginate @groups %>
     <% end %>
   </div>
 </div>

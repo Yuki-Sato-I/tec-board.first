@@ -7,23 +7,28 @@
  .top-contents{
    width: 100%;
    height: 900px;
-   background-image: url("blue.jpg");
+   background-image: image_url("blue.jpg");
    background-size: cover;
  }
-
+ 
  .top-container {
    margin: 0px 12px;
  }
 
  .top-text  {
    color: white;
-   padding-top: 170px;
+   padding-top: 100px;
  }
 
  .top-text h1 {
    margin: 0px 0px;
    font-size: 80px;
    text-align: center;
+ }
+ @media (max-width: 1000px) {
+   .top-text h1{
+     text-align: left;
+   }
  }
 
  .top-text p {
@@ -61,22 +66,5 @@
   text-decoration: none;
  }
 
-
-/**************************************** middle ***********************************************/
-
- .middle-contents {
-   height: 800px;
-   background-color: rgb(236, 236, 236); /* 一時的な背景色の変更　白に戻す */
- }
-
- .middle-container {
-   margin: 0px 12px;
- }
-
- .middle-text {
-   color: white;
-   text-align: center;
-   padding-top: 50px;
- }
 
  /************************************* no used ***********************************************/
