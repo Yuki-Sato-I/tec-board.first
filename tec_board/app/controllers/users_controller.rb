@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
   PER = 5
   def index
-    @users = User.page(params[:page]).per(PER)
+    @users = User.where(activated: true).page(params[:page]).per(PER)
   end
 
   def show
@@ -18,14 +18,10 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    # @user.image_name = "default.jpg"
-    #if @user.id == "1"  ###最初に登録したものを管理者にする　まだsaveしてないから無理
-     #@user.update_attribute(admin: true)
-    #end
     if @user.save
-      log_in(@user)
-      flash[:success] = "TecBoardへようこそ!!"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = "emailを確認してください"
+      redirect_to '/'
     else
       render 'new'
     end

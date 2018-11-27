@@ -41,6 +41,9 @@ Rails.application.routes.draw do
   #################  users_controller  ####################
   resources :users;
 
+  #################  account_activations_controller  #############
+  resources :account_activations,only: [:edit]
+
 
 
 
