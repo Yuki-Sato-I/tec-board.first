@@ -1,5 +1,5 @@
-Hi <%= @user.name %>,
+こんにちは <%= @user.name %>さん,
 
-Welcome to the Sample App! Click on the link below to activate your account:
+TecBoardへのご登録ありがとうございます。 下記のURLをクリックしてアカウントを有効にしてください。
 
 <%= edit_account_activation_url(@user.activation_token, email: @user.email) %>

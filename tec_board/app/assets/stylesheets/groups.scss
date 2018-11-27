@@ -16,7 +16,7 @@
 
  .group-btn-wrapper {
    width: 60%;
-   margin: 0 auto;
+   margin: 40px auto;
    a {
     text-decoration: none;
     color: white;
@@ -31,6 +31,17 @@
     }
   }
  }
+ @media(min-width:1450px){
+   .group-btn-wrapper {
+     width: 780px;
+   }
+ }
+ @media(max-width:1000px){
+   .group-btn-wrapper{
+     width: 600px;
+   }
+ }
+
  @media(max-width:670px){
    .group-btn-wrapper{
      margin: 0px 0px !important;

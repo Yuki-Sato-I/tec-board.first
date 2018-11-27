@@ -2,7 +2,7 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(:invite, url: '/groups/permission' ) do |f| %>
-      <%= f.label :invitation_code %>
+      <%= f.label :invitation_code, "招待コード" %>
       <%= f.text_field :invitation_code %>
       <%= f.submit "申請する" , class: "btn btn-primary"%>
     <% end %>

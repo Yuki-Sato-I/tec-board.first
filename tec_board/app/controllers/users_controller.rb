@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :logged_in_user,only:[:edit,:update,:index,:destroy]
   before_action :correct_user, only:[:edit,:update]
-  before_action :admin_user, only: :destroy
+  before_action :admin_user, only: [:destroy,:index]
   PER = 5
   def index
     @users = User.where(activated: true).page(params[:page]).per(PER)
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       @user.send_activation_email
-      flash[:info] = "emailを確認してください"
+      flash[:danger] = "emailを確認してください"
       redirect_to '/'
     else
       render 'new'
@@ -74,7 +74,8 @@ class UsersController < ApplicationController
     end
     # 管理者かどうか確認
     def admin_user
-      redirect_to("/") unless current_user.admin?
+      flash[:danger] = "権限がありません."
+      redirect_to(current_user) unless current_user.admin?
     end
 
 end

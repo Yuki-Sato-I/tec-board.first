@@ -2,6 +2,7 @@ module SessionsHelper
   # 渡されたユーザーでログインする
   def log_in(user)
     session[:user_id] = user.id
+    flash[:success] = "ログインしました."
   end
 
   # ユーザーのセッションを永続的にする
@@ -41,6 +42,7 @@ module SessionsHelper
     forget(current_user)
     session.delete(:user_id)
     @current_user = nil
+    flash[:success] = "ログアウトしました."
   end
   def current_user?(user)
     user == current_user

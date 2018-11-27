@@ -18,6 +18,7 @@
  body {
    margin: 0px 0px;
    margin-top: 91px;
+   padding-top: 60px;
  }
 
   * {
@@ -32,9 +33,7 @@
   margin-right: 0px;
   margin-left: 0px;
 }
- .dropdown-menu{
 
-}
 
  
 
@@ -185,13 +184,16 @@
    width: 80%;
    text-align: center;
    margin: 0 auto;
-   margin-top: 70px; 
    border-radius: 5px;
+   position: absolute;
+   top: 91px;
+   left: calc(20% / 2);
  }
  .flash-s p {
    color: rgba(64, 241, 87, 0.8);
    padding-top: 0.5vh;
    margin: 0;
+   font-size: 4vh;
  }
 
  .flash-d {
@@ -199,13 +201,16 @@
   width: 80%;
   text-align: center;
   margin: 0 auto;
-  margin-top: 70px;
   border-radius: 5px;
+  position: absolute;
+  top: 91px;
+  left: calc(20% / 2);
 }
 .flash-d p{
   color: rgba(211, 28, 28, 0.8);
   padding-top: 0.5vh;
   margin: 0;
+  font-size: 4vh;
 }
 
 @media (min-width: 670px) {
