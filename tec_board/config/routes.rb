@@ -45,7 +45,8 @@ Rails.application.routes.draw do
   #################  account_activations_controller  #############
   resources :account_activations,only: [:edit]
 
-
+  #################  passwordreset_controller  ###############
+  resources :password_resets, only: [:new, :create, :edit, :update]
 
 
 
