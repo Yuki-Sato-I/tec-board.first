@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get '/albums/:group_id/index', to:'albums#index'
   get '/albums/:group_id/edit/:id', to:'albums#edit'
   post '/albums/:group_id', to:'albums#create'
+  get '/albums/:group_id', to:'albums#edit'
+  get '/albums/:group_id', to:'albums#new'
   patch '/albums/:group_id/:id' ,to:'albums#update'
   delete '/albums/:group_id/:id' ,to:'albums#destroy'
 
@@ -19,6 +21,7 @@ Rails.application.routes.draw do
   get '/boards/:group_id/index', to:'boards#index'
   get '/boards/:group_id/edit/:id', to:'boards#edit'
   post '/boards/:group_id', to:'boards#create'
+  get '/boards/:group_id' , to:'boards#new'
   patch '/boards/:group_id/:id' ,to:'boards#update'
   delete '/boards/:group_id/:id' ,to:'boards#destroy'
 
@@ -32,6 +35,7 @@ Rails.application.routes.draw do
   get '/groups/:group_id/chat',to:'groups#chat'
   post '/groups/:group_id/chat',to:'groups#chat_create' 
   post '/group', to: 'groups#create'
+  get '/group', to: 'groups#new'
   get '/groups/:id',to:'groups#index' 
 
   #################  home_controller  #####################

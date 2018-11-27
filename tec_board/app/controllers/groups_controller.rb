@@ -69,8 +69,7 @@ class GroupsController < ApplicationController
       flash[:success] = "グループを作成しました."
       redirect_to "/groups/#{@group.id}"
     else
-      flash[:danger] = "グループ作成に失敗しました."
-      redirect_to user_path(current_user)
+      render 'new'
     end
   end
   private

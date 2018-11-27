@@ -23,7 +23,6 @@ class BoardsController < ApplicationController
       flash[:success] = "掲示を作成しました."
       redirect_to "/boards/#{params[:group_id]}/index"
     else
-      flash.now[:danger] = "掲示作成に失敗しました."
       render 'new'
     end
   end

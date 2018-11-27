@@ -22,7 +22,6 @@ class AlbumsController < ApplicationController
       flash[:success] = "編集が完了しました."
       redirect_to "/albums/#{@group.id}/show/#{@album.id}"
     else
-      flash.now[:danger] = "編集が失敗しました."
       render 'edit'
     end
   end
@@ -38,7 +37,6 @@ class AlbumsController < ApplicationController
       flash[:success] = "アルバムを作成しました."
       redirect_to "/albums/#{params[:group_id]}/index"
     else
-      flash.now[:danger] = "アルバム作成に失敗しました."
       render 'new'
     end
   end

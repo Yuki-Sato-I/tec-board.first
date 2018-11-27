@@ -1,5 +1,17 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
+    <% if @board.errors.any? %>
+      <div id="error_explanation">
+        <div class="alert alert-danger">
+          The form contains <%= pluralize(@board.errors.count, "error") %>.
+        </div>
+        <ul>
+          <% @board.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
     <%= form_for(@board,url: "/boards/#{params[:group_id]}") do |f| %>
       <%= f.label :title , "タイトル"%>
       <%= f.text_field :title %>
