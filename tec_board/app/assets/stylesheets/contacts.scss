@@ -1,0 +1,32 @@
+// Place all the styles related to the Contacts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/**************** index  ***********************/
+
+
+ .contact-box{
+  width: 95%;
+  border: 2px solid black;
+  margin: 3px auto;
+  text-align: center;
+}
+@media(min-width: 700px){
+  .contact-box {
+    width: 700px;
+  }
+}
+
+ .contact_content{
+  border-bottom: 1px solid gray;
+}
+  .contact_name{
+    display: inline-block;
+    margin: 0;
+  }
+
+  .contact_email{
+    display: inline-block;
+    margin: 0;
+  }

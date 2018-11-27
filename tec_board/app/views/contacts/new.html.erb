@@ -1,0 +1,29 @@
+<h1 class="title">お問い合わせ</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <% if @contact.errors.any? %>
+      <div id="error_explanation">
+        <div class="alert alert-danger">
+          The form contains <%= pluralize(@contact.errors.count, "error") %>.
+        </div>
+        <ul>
+          <% @contact.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <%= form_for(@contact,url: '/contacts') do |f| %>
+      <%= f.label :questioner_name , "名前"%>
+      <%= f.text_field :questioner_name %>
+    
+      <%= f.label :questioner_email , "Emailアドレス"%>
+      <%= f.email_field :questioner_email %>
+       
+      <%= f.label :content ,"内容"%>
+      <%= f.text_area :content %>
+
+      <%= f.submit "送信", class: "btn btn-primary" %>
+    <% end %>
+  </div>  
+</div>

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get '/contacts/new', to:'contacts#new'
+  get '/contacts/index', to:'contacts#index'
+  get '/contacts', to:'contacts#new'
+  post '/contacts', to: 'contacts#create'
+  delete '/contacts/:id', to: 'contacts#destroy'
   ################  albums_controller  ################
   get '/albums/:group_id/new', to:'albums#new'
   get '/albums/:group_id/show/:id', to:'albums#show'

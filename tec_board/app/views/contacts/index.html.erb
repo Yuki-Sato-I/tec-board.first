@@ -1,0 +1,11 @@
+<h1 class="title">お問い合わせ内容</h1>
+  <%= paginate @contacts %>
+  <% @contacts.order("updated_at DESC").each do |contact| %>
+    <div class="contact-box">
+      <div class="contact">
+        <p class="contact_content"><%= contact.content %></p>
+        <p class="contact_name"><%= contact.questioner_name %>------</p>
+        <p class="contact_email"><%= contact.questioner_email %>----<%= contact.created_at.strftime("%Y-%m-%d %H:%M") %><%= link_to "削除", "/contacts/#{contact.id}", method: :delete,data: { confirm: "削除して宜しいですか?" } %></p>
+      </div>
+    </div>
+    <% end %>
