@@ -56,6 +56,10 @@ module SessionsHelper
       group = Group.find_by(id: params[:id])
     end
 
+    if group == nil
+      redirect_to current_user and return
+    end
+
     if group.user_groups.find_by(user_id: current_user.id)
     else
       redirect_to current_user
