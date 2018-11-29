@@ -1,4 +1,7 @@
 class AlbumsController < ApplicationController
+  before_action :logged_in_user
+  before_action :group_member
+
   PER = 5
   def index
     @group = Group.find_by(id: params[:group_id])

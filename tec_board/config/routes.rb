@@ -31,7 +31,6 @@ Rails.application.routes.draw do
   get '/groups/permission', to:'groups#invited'
   post '/groups/permission', to:'groups#permission'
   get '/groups/member/:id',to:'groups#member'
-  get '/groups/picture',to:'groups#picture'
   get '/groups/:group_id/chat',to:'groups#chat'
   post '/groups/:group_id/chat',to:'groups#chat_create' 
   post '/group', to: 'groups#create'

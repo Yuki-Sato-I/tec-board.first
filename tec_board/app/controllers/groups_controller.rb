@@ -1,5 +1,7 @@
 class GroupsController < ApplicationController
   before_action :logged_in_user
+  before_action :group_member, only: [:member,:index,:chat,:chat_create]
+
   def index
     @group = Group.find_by(id: params[:id])
   end
@@ -90,4 +92,5 @@ class GroupsController < ApplicationController
         redirect_to login_url
       end
     end
+
 end

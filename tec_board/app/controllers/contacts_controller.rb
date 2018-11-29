@@ -35,8 +35,7 @@ class ContactsController < ApplicationController
       if current_user
         if current_user.admin
         else
-          flash[:danger] = "権限がありません."
-          redirect_to(current_user)
+          redirect_to '/'
         end
       else
         redirect_to '/'

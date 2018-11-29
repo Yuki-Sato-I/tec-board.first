@@ -47,4 +47,18 @@ module SessionsHelper
   def current_user?(user)
     user == current_user
   end
+    
+  # group member以外入れない
+  def group_member
+    if params[:group_id]
+      group = Group.find_by(id: params[:group_id])
+    else
+      group = Group.find_by(id: params[:id])
+    end
+
+    if group.user_groups.find_by(user_id: current_user.id)
+    else
+      redirect_to current_user
+    end
+  end
 end
