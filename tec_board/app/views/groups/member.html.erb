@@ -1,12 +1,12 @@
 <div class="members-container">
-  <h1><%= @group.name %>のメンバー</h1>
+  <h1 class="title"><%= @group.name %>のメンバー</h1>
   <%= paginate @members %>
   <% @members.each do |member| %>
     <div class="members-name">
       <% if member.image_name.url %>
         <%= image_tag member.image_name.url ,size: "100x100" %>
       <% else %>
-        <%= image_tag "/user_images/default.jpg", :size => '100x100' %>
+        <%= image_tag "/user_images/default2.jpg", :size => '100x100' %>
       <% end %>
       <%= link_to("#{member.name}","/users/#{member.id}") %>
     </div>

@@ -1,4 +1,4 @@
-<h1>All users</h1>
+<h1 class="title">All users</h1>
 <ul class="users">
 <%= paginate @users %>
   <% @users.each do |user| %>
@@ -6,7 +6,7 @@
       <% if user.image_name.url %>
         <%= image_tag user.image_name.url ,size: "150x150" %>
       <% else %>
-        <%= image_tag "/user_images/default.jpg", :size => '100x100' %>
+        <%= image_tag "/user_images/default2.jpg", :size => '150x150' %>
       <% end %>
       <%= link_to user.name, user %>
         <% if current_user.admin? && !current_user?(user) %>

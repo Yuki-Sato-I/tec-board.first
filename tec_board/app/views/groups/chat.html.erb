@@ -1,4 +1,4 @@
-<h1 class="title">Groups chat</h1>
+<h1 class="title">グループ内チャット</h1>
 <% if @chats != nil %>
   <div class="chat-container">
     <div class="chat-room", style="width:95%; height:500px; overflow:auto;">
@@ -8,7 +8,7 @@
         <% if @user_chat.image_name.url != nil %>
           <% user_image = @user_chat.image_name.url %>
         <% else %>
-          <% user_image = "/user_images/default.jpg" %>
+          <% user_image = "/user_images/default2.jpg" %>
         <% end %>
 
         <% if chat.user_id == @user.id %> 

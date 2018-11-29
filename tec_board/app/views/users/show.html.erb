@@ -3,7 +3,7 @@
     <% if @user.image_name.url %>
       <%= image_tag @user.image_name.url ,size: "150x150" %>
     <% else %>
-      <%= image_tag "/user_images/default.jpg", :size => '150x150' %>
+      <%= image_tag "/user_images/default2.jpg", :size => '150x150' %>
     <% end %>
     
     <p><%= @user.name %></p>
@@ -14,12 +14,14 @@
       </div>
       <div class="my-groups">
         <h1 class="g-title">参加済のグループ</h1>
-        <% @groups.each do |group| %> <!-- 表示されない('＃')  -->
+        <% @groups.order("updated_at DESC").each do |group| %> <!-- 表示されない('＃')  -->
           <div class="group-name">
-            <% if current_user.id == group.admin_user_id %>
-              <span>管理人</span>
-            <% end %>
-            <h1><%= link_to("#{group.name}", "/groups/#{group.id}") %></h1>
+            <h1>
+              <% if current_user.id == group.admin_user_id %>
+                <span>管理人</span>
+              <% end %>
+              <%= link_to("#{group.name}", "/groups/#{group.id}") %>
+            </h1>
           </div>
         <% end %>
       </div>

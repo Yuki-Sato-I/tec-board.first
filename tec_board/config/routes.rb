@@ -41,7 +41,8 @@ Rails.application.routes.draw do
   #################  home_controller  #####################
   get '/' ,to: 'home#top'
   get '/about', to: 'home#about' #about_path, about_url
-
+  get '/terms', to: 'home#terms_of_service'
+  get '/policy', to: 'home#policy'
   #################  sessions_controller  ################
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'

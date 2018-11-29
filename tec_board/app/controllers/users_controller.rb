@@ -74,7 +74,6 @@ class UsersController < ApplicationController
     end
     # 管理者かどうか確認
     def admin_user
-      flash[:danger] = "権限がありません."
       redirect_to(current_user) unless current_user.admin?
     end
 

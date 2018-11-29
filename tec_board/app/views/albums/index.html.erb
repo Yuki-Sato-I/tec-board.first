@@ -1,5 +1,7 @@
 <h1 class="title">アルバム</h1>
-<%= link_to("新規投稿", "/albums/#{@group.id}/new") %>
+<div class="board-h1">
+  <span><%= link_to("新規投稿", "/albums/#{@group.id}/new") %></span>
+</div>
 <%= paginate @albums %>
 <div class="album-container">
   <% @albums.order("updated_at DESC").each do |album| %>
@@ -12,4 +14,4 @@
       <% end %> -->
     </div>
   <% end %>
-</div>
+</div> 

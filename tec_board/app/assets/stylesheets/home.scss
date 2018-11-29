@@ -2,14 +2,31 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+/********************************  about *******************/
+.about {
+  background-color: rgba(115, 248, 241,0.8);
+  padding: 20px 0px;
+  margin: 0px 5px;
+  margin-top: 120px;
+  border-radius: 7px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+  text-align: center;
+  img{
+    width: 30%;
+    height: 10%;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+  }
+  .about-images {
+    display: inline-block;
+  }
+}
+  
 /******************************************* top *************************************************/
  .top-contents{
    width: 100%;
    height: 900px;
    background-image: image_url("blue.jpg");
    background-size: cover;
-   margin-top: -60px !important;
  }
  
  .top-container {
@@ -68,4 +85,25 @@
  }
 
 
- /************************************* no used ***********************************************/
+ /************************************* terms_of_service ***********************************************/
+ .terms_of_service {
+   width: 95%;
+   margin: 0 auto;
+   background-color: rgba(164, 235, 211,0.4);
+   border-radius: 12px;
+   border: 2px solid rgb(137, 250, 212);
+   margin-bottom: 40px;
+   margin-top: 111px;
+   box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.4);
+ }
+
+ .policy {
+  width: 95%;
+  margin: 0 auto;
+  background-color: rgba(164, 235, 211,0.4);
+  border-radius: 12px;
+  border: 2px solid rgb(137, 250, 212);
+  margin-bottom: 40px;
+  margin-top: 111px;
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.4);
+}

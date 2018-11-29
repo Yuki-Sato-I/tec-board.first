@@ -6,6 +6,9 @@ ruby '2.5.1'
 gem 'carrierwave' # 画像アップロードする為のgem
 gem 'rmagick'     # 画像をリサイズさせるgem
 
+#直接アップロード
+#gem 'aws-sdk', '~> 2'
+
 gem 'kaminari', '~>0.17.0' #pagenate
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -14,7 +17,10 @@ gem 'bootstrap-sass', '3.3.7'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
 # 本番環境(heroku)ではPostgreSQLを使用
-gem 'pg', group: :production
+group :production do
+  gem 'pg',   '0.20.0'
+  gem 'fog',  '1.42'
+end
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
