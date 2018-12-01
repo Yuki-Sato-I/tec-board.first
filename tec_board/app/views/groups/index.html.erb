@@ -9,9 +9,9 @@
     </div>
   </div>
   <% if current_user.id == @group.admin_user_id %>
-    <div class="admin-user">
+    <!-- <div class="admin-user">
       <%= link_to("管理人用ページ","#") %>
-    </div>
+    </div> -->
     <p class="invite">招待コード</p>
     【<%= @group.invitation_code %>】
   <% end %>
